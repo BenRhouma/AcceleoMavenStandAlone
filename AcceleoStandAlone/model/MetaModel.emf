@@ -1,0 +1,39 @@
+@namespace(
+	uri="http://wwww.sofrecom.codegen",
+	prefix="p")
+package com.sofrecom.codegen;
+
+
+class Entity{
+	attr String name;
+    val Attribute[*] attributes;
+    ref Entity[*] refEntity;
+   
+}
+
+
+class Attribute{
+   attr String name;
+   attr String type; 
+}
+
+
+/**
+	to decorate view model of the current component 
+*/
+class UIHints{
+   attr int ID;
+   /* the type of the componenet*/
+   attr String style;
+}
+
+
+class ViewModel{
+ 	attr String ID;
+ 	val Entity[*] entities;
+ 
+}
+
+
+
+

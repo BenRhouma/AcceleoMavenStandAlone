@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:ViewModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://wwww.sofrecom.codegen" xsi:schemaLocation="http://wwww.sofrecom.codegen MetaModel.ecore">
+  <entities name="zied">
+    <attributes name="zied" type="String"/>
+  </entities>
+</p:ViewModel>
