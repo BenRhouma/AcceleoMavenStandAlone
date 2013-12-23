@@ -11,7 +11,7 @@ public class Launcher {
      */
     public static void main(String[] args) {
 
-        Template.main(new String[]{new File("./").getAbsolutePath() + "\\model\\ViewModel.xmi", "./Output-gen"});
+        Template.run(new String[]{new File("./").getAbsolutePath() + "\\model\\ViewModel.xmi", "./Output-gen"});
     }
 
 

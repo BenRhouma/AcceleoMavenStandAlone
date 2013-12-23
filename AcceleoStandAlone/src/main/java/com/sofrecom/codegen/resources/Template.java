@@ -118,7 +118,7 @@ public class Template extends AbstractAcceleoGenerator {
      *            Arguments of the generation.
      * @generated
      */
-    public static void main(String[] args) {
+    public static void run(String[] args) {
         try {
             if (args.length < 2) {
                 System.out.println("Arguments not valid : {model, folder}.");
