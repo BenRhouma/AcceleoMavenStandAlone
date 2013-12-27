@@ -1,4 +1,4 @@
-package com.sofrecom.codegen.launcher;
+package com.sofrecom.ui;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,8 +24,8 @@ import codegen.ViewModel;
 public class XmiFormatter {
 
 	private static ClassLoader cl;
-	private String entityName;
-	private String baseDtoPath;
+	private final String entityName;
+	private final String baseDtoPath;
 	private Map<String, String> fieldsFromDto ;
 	
 	
@@ -47,7 +47,7 @@ public class XmiFormatter {
 	 * @return : a map containing the field name as key and the type as the
 	 *         value
 	 */
-	public Map<String, String> getFieldsFromDto(final String classesPath,final String fullQualifiedClassName) {
+	private Map<String, String> getFieldsFromDto(final String classesPath,final String fullQualifiedClassName) {
 		final Map<String, String> fieldsMap = new HashMap<>();
 		String path = "file:\\";
 
@@ -157,10 +157,5 @@ public class XmiFormatter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public static void main(String... args) {
-		final XmiFormatter xmiFormatter = new XmiFormatter("Person","dto","E:\\DevSrc\\Remot\\target\\scala-2.10\\classes");
-		xmiFormatter.buildAndSaveViewModel();
 	}
 }

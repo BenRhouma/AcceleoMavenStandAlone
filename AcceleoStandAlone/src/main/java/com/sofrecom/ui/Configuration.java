@@ -1,4 +1,4 @@
-package com.sofrecom.codegen.launcher;
+package com.sofrecom.ui;
 
 import java.awt.Component;
 import java.io.File;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:ViewModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://wwww.sofrecom.codegen" xsi:schemaLocation="http://wwww.sofrecom.codegen MetaModel.ecore">
+  <entities name="LinkedAccount">
+    <attributes name="id" type="class java.lang.Long"/>
+    <attributes name="providerKey" type="class java.lang.String"/>
+    <attributes name="userId" type="class java.lang.Long"/>
+    <attributes name="providerUserId" type="class java.lang.String"/>
+  </entities>
+</p:ViewModel>
