@@ -24,8 +24,10 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
+import codegen.ViewModel;
+
 /**
- * Entry point of the 'Main' generation module.
+ * Entry point of the 'Template' generation module.
  *
  * @generated
  */
@@ -118,7 +120,7 @@ public class Template extends AbstractAcceleoGenerator {
      *            Arguments of the generation.
      * @generated
      */
-    public static void run(String[] args) {
+    public static void main(String[] args) {
         try {
             if (args.length < 2) {
                 System.out.println("Arguments not valid : {model, folder}.");

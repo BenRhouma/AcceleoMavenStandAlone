@@ -1,39 +1,38 @@
-@namespace(
-	uri="http://wwww.sofrecom.codegen",
-	prefix="p")
-package com.sofrecom.codegen;
+@namespace(uri="http://wwww.sofrecom.codegen", prefix="p")
+package codegen;
 
 
-class Entity{
-	attr String name;
-    val Attribute[*] attributes;
-    ref Entity[*] refEntity;
-   
+class MapEnrty : java.util.Map$Entry{
+   attr EString key   ;
+   attr EString value ;
 }
 
 
-class Attribute{
-   attr String name;
-   attr String type; 
+
+class Entity {
+  attr String name;
+  val Attribute[*] attributes;
+  ref Entity[*] refEntity;
+  val Context[*] context;
 }
 
-
-/**
-	to decorate view model of the current component 
-*/
-class UIHints{
-   attr int ID;
-   /* the type of the componenet*/
-   attr String style;
+class Attribute {
+  attr String name;
+  attr String type;
+  val Context[*] context;
 }
 
-
-class ViewModel{
- 	attr String ID;
- 	val Entity[*] entities;
- 
+class Context {
+  attr String key;
+  attr String value;
 }
 
+class ViewModel {
+  val Context[*] context;
+  attr String ID;
+  val Entity[*] entities;
+  val MapEnrty[*] values;
+}
 
 
 

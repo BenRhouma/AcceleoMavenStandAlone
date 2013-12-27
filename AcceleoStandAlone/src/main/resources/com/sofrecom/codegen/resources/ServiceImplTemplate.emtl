@@ -1,0 +1,1393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="ServiceImplTemplate" nsURI="com::sofrecom::codegen::resources::ServiceImplTemplate" startHeaderPosition="29" endHeaderPosition="426">
+    <input>
+      <takesTypesFrom href="http://wwww.sofrecom.codegen#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateServiceImpl" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="package service;&#xA;&#xA;import com.google.inject.Inject;&#xA;import com.google.inject.Singleton;&#xA;import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;&#xA;import dto."/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;import mappers."/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper;&#xA;import play.api.mybatis.guice.paginator.Page;&#xA;import org.mybatis.guice.transactional.Transactional;&#xA;import play.Logger;&#xA;import play.api.mybatis.guice.AutoBind;&#xA;import play.libs.F;&#xA;&#xA;import java.sql.SQLIntegrityConstraintViolationException;&#xA;&#xA;@Singleton&#xA;@AutoBind(service = "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Service.class)&#xA;public class "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ServiceImpl implements "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Service {&#xA;&#xA;    @Inject&#xA;    private "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper;&#xA;&#xA;&#xA;    @Override&#xA;    public void insert"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;        "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper.insert("/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;    }&#xA;&#xA;    @Override&#xA;    public "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" select"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="(Long "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Id) {&#xA;        return "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper.selectByPrimaryKey("/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Id);&#xA;    }&#xA;&#xA;&#xA;    @Override&#xA;    public Page getPage(int index) {&#xA;        return new Page("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper.class, index);&#xA;    }&#xA;&#xA;    /**&#xA;     * this method is more optimized than the simple getPage, a less sql query is used here, because getPage, make a select count before returning result&#xA;     *&#xA;     * @param index : index of the page&#xA;     * @param from  : page used as start point of the seek operation&#xA;     * @return : "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" mybatis result&#xA;     */&#xA;    @Override&#xA;    public Page getPage(int index, Page from) {&#xA;        return from.seekPage(index);&#xA;    }&#xA;    @Override&#xA;    public F.Tuple&lt;Boolean, String> create"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="FromRequest("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;        try {&#xA;            "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".setName("/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".getFirstName() + &quot; &quot; + "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".getLastName());&#xA;            this.insert"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;            return F.Tuple(true, &quot;&quot;);&#xA;        } catch (Exception e) {&#xA;            Logger.error(&quot;Error during "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" insertion&quot;, e);&#xA;            return F.Tuple(false, &quot;could not save the "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" please verify the use informations&quot;);&#xA;        }&#xA;    }&#xA;&#xA;    @Override&#xA;    public F.Tuple&lt;Boolean, String> update"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;        try {&#xA;            Logger.info(&quot;updating "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &quot; + "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".getId());&#xA;            "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper.updateByPrimaryKeySelective("/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;            return F.Tuple(true, null);&#xA;        } catch (Exception e) {&#xA;            Logger.error(&quot;Error during person update&quot;, e);&#xA;            String message = e.getMessage();&#xA;            if (e instanceof SQLIntegrityConstraintViolationException) {&#xA;                SQLIntegrityConstraintViolationException d = (MySQLIntegrityConstraintViolationException) e.getCause();&#xA;                message = d.getMessage();&#xA;            }&#xA;            return F.Tuple(false, message);&#xA;        }&#xA;    }&#xA;&#xA;    @Override&#xA;    public F.Tuple&lt;Boolean, String> delete"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ById(Long id) {&#xA;        try {&#xA;            Logger.info(&quot;updating "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &quot; + id);&#xA;            "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Mapper.deleteByPrimaryKey(id);&#xA;            return F.Tuple(true, null);&#xA;        } catch (Exception e) {&#xA;            Logger.error(&quot;Error during person update&quot;, e);&#xA;            String message = e.getMessage();&#xA;            if (e instanceof SQLIntegrityConstraintViolationException) {&#xA;                SQLIntegrityConstraintViolationException d = (MySQLIntegrityConstraintViolationException) e.getCause();&#xA;                message = d.getMessage();&#xA;            }&#xA;            return F.Tuple(false, message);&#xA;        }&#xA;    }&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="./service/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceImpl/entity">
+                <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ServiceImpl.java">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="entity">
+        <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateServiceImpl">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateServiceImpl"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="entity">
+          <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Entity_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://wwww.sofrecom.codegen#//Entity"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateServiceImpl">
+      <details key="start" value="92"/>
+      <details key="end" value="4035"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateServiceImpl/%">
+      <details key="start" value="147"/>
+      <details key="end" value="148"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateServiceImpl/%.1">
+      <details key="start" value="148"/>
+      <details key="end" value="4023"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateServiceImpl/%.1/%">
+      <details key="start" value="233"/>
+      <details key="end" value="414"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateServiceImpl/%.1/%.1">
+      <details key="start" value="415"/>
+      <details key="end" value="426"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateServiceImpl/%.1/%.1/entity">
+      <details key="start" value="415"/>
+      <details key="end" value="421"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateServiceImpl/%.1/%.2">
+      <details key="start" value="428"/>
+      <details key="end" value="445"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateServiceImpl/%.1/%.3">
+      <details key="start" value="446"/>
+      <details key="end" value="457"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateServiceImpl/%.1/%.3/entity">
+      <details key="start" value="446"/>
+      <details key="end" value="452"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateServiceImpl/%.1/%.4">
+      <details key="start" value="459"/>
+      <details key="end" value="738"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateServiceImpl/%.1/%.5">
+      <details key="start" value="739"/>
+      <details key="end" value="750"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateServiceImpl/%.1/%.5/entity">
+      <details key="start" value="739"/>
+      <details key="end" value="745"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateServiceImpl/%.1/%.6">
+      <details key="start" value="752"/>
+      <details key="end" value="780"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateServiceImpl/%.1/%.7">
+      <details key="start" value="781"/>
+      <details key="end" value="792"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateServiceImpl/%.1/%.7/entity">
+      <details key="start" value="781"/>
+      <details key="end" value="787"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateServiceImpl/%.1/%.8">
+      <details key="start" value="794"/>
+      <details key="end" value="817"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateServiceImpl/%.1/%.9">
+      <details key="start" value="818"/>
+      <details key="end" value="829"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateServiceImpl/%.1/%.9/entity">
+      <details key="start" value="818"/>
+      <details key="end" value="824"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateServiceImpl/%.1/%.10">
+      <details key="start" value="831"/>
+      <details key="end" value="866"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateServiceImpl/%.1/%.11">
+      <details key="start" value="867"/>
+      <details key="end" value="878"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateServiceImpl/%.1/%.11/entity">
+      <details key="start" value="867"/>
+      <details key="end" value="873"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateServiceImpl/%.1/%.12">
+      <details key="start" value="880"/>
+      <details key="end" value="887"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateServiceImpl/%.1/%.13">
+      <details key="start" value="888"/>
+      <details key="end" value="909"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateServiceImpl/%.1/%.13/%">
+      <details key="start" value="888"/>
+      <details key="end" value="899"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateServiceImpl/%.1/%.13/%/entity">
+      <details key="start" value="888"/>
+      <details key="end" value="894"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateServiceImpl/%.1/%.14">
+      <details key="start" value="911"/>
+      <details key="end" value="957"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateServiceImpl/%.1/%.15">
+      <details key="start" value="958"/>
+      <details key="end" value="969"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateServiceImpl/%.1/%.15/entity">
+      <details key="start" value="958"/>
+      <details key="end" value="964"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateServiceImpl/%.1/%.16">
+      <details key="start" value="971"/>
+      <details key="end" value="972"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateServiceImpl/%.1/%.17">
+      <details key="start" value="973"/>
+      <details key="end" value="984"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateServiceImpl/%.1/%.17/entity">
+      <details key="start" value="973"/>
+      <details key="end" value="979"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateServiceImpl/%.1/%.18">
+      <details key="start" value="986"/>
+      <details key="end" value="987"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateServiceImpl/%.1/%.19">
+      <details key="start" value="988"/>
+      <details key="end" value="1009"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateServiceImpl/%.1/%.19/%">
+      <details key="start" value="988"/>
+      <details key="end" value="999"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateServiceImpl/%.1/%.19/%/entity">
+      <details key="start" value="988"/>
+      <details key="end" value="994"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateServiceImpl/%.1/%.20">
+      <details key="start" value="1011"/>
+      <details key="end" value="1023"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateServiceImpl/%.1/%.21">
+      <details key="start" value="1024"/>
+      <details key="end" value="1045"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateServiceImpl/%.1/%.21/%">
+      <details key="start" value="1024"/>
+      <details key="end" value="1035"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateServiceImpl/%.1/%.21/%/entity">
+      <details key="start" value="1024"/>
+      <details key="end" value="1030"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateServiceImpl/%.1/%.22">
+      <details key="start" value="1047"/>
+      <details key="end" value="1061"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateServiceImpl/%.1/%.23">
+      <details key="start" value="1062"/>
+      <details key="end" value="1083"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateServiceImpl/%.1/%.23/%">
+      <details key="start" value="1062"/>
+      <details key="end" value="1073"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateServiceImpl/%.1/%.23/%/entity">
+      <details key="start" value="1062"/>
+      <details key="end" value="1068"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateServiceImpl/%.1/%.24">
+      <details key="start" value="1085"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateServiceImpl/%.1/%.25">
+      <details key="start" value="1121"/>
+      <details key="end" value="1132"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateServiceImpl/%.1/%.25/entity">
+      <details key="start" value="1121"/>
+      <details key="end" value="1127"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateServiceImpl/%.1/%.26">
+      <details key="start" value="1134"/>
+      <details key="end" value="1141"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateServiceImpl/%.1/%.27">
+      <details key="start" value="1142"/>
+      <details key="end" value="1153"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateServiceImpl/%.1/%.27/entity">
+      <details key="start" value="1142"/>
+      <details key="end" value="1148"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateServiceImpl/%.1/%.28">
+      <details key="start" value="1155"/>
+      <details key="end" value="1161"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateServiceImpl/%.1/%.29">
+      <details key="start" value="1162"/>
+      <details key="end" value="1183"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateServiceImpl/%.1/%.29/%">
+      <details key="start" value="1162"/>
+      <details key="end" value="1173"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateServiceImpl/%.1/%.29/%/entity">
+      <details key="start" value="1162"/>
+      <details key="end" value="1168"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateServiceImpl/%.1/%.30">
+      <details key="start" value="1185"/>
+      <details key="end" value="1206"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateServiceImpl/%.1/%.31">
+      <details key="start" value="1207"/>
+      <details key="end" value="1228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateServiceImpl/%.1/%.31/%">
+      <details key="start" value="1207"/>
+      <details key="end" value="1218"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateServiceImpl/%.1/%.31/%/entity">
+      <details key="start" value="1207"/>
+      <details key="end" value="1213"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateServiceImpl/%.1/%.32">
+      <details key="start" value="1230"/>
+      <details key="end" value="1256"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateServiceImpl/%.1/%.33">
+      <details key="start" value="1257"/>
+      <details key="end" value="1278"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateServiceImpl/%.1/%.33/%">
+      <details key="start" value="1257"/>
+      <details key="end" value="1268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateServiceImpl/%.1/%.33/%/entity">
+      <details key="start" value="1257"/>
+      <details key="end" value="1263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateServiceImpl/%.1/%.34">
+      <details key="start" value="1280"/>
+      <details key="end" value="1368"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateServiceImpl/%.1/%.35">
+      <details key="start" value="1369"/>
+      <details key="end" value="1380"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateServiceImpl/%.1/%.35/entity">
+      <details key="start" value="1369"/>
+      <details key="end" value="1375"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateServiceImpl/%.1/%.36">
+      <details key="start" value="1382"/>
+      <details key="end" value="1706"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateServiceImpl/%.1/%.37">
+      <details key="start" value="1707"/>
+      <details key="end" value="1728"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateServiceImpl/%.1/%.37/%">
+      <details key="start" value="1707"/>
+      <details key="end" value="1718"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateServiceImpl/%.1/%.37/%/entity">
+      <details key="start" value="1707"/>
+      <details key="end" value="1713"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateServiceImpl/%.1/%.38">
+      <details key="start" value="1730"/>
+      <details key="end" value="1915"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateServiceImpl/%.1/%.39">
+      <details key="start" value="1916"/>
+      <details key="end" value="1927"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateServiceImpl/%.1/%.39/entity">
+      <details key="start" value="1916"/>
+      <details key="end" value="1922"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateServiceImpl/%.1/%.40">
+      <details key="start" value="1929"/>
+      <details key="end" value="1941"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateServiceImpl/%.1/%.41">
+      <details key="start" value="1942"/>
+      <details key="end" value="1953"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateServiceImpl/%.1/%.41/entity">
+      <details key="start" value="1942"/>
+      <details key="end" value="1948"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateServiceImpl/%.1/%.42">
+      <details key="start" value="1955"/>
+      <details key="end" value="1956"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateServiceImpl/%.1/%.43">
+      <details key="start" value="1957"/>
+      <details key="end" value="1978"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateServiceImpl/%.1/%.43/%">
+      <details key="start" value="1957"/>
+      <details key="end" value="1968"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateServiceImpl/%.1/%.43/%/entity">
+      <details key="start" value="1957"/>
+      <details key="end" value="1963"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateServiceImpl/%.1/%.44">
+      <details key="start" value="1980"/>
+      <details key="end" value="2010"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateServiceImpl/%.1/%.45">
+      <details key="start" value="2011"/>
+      <details key="end" value="2032"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateServiceImpl/%.1/%.45/%">
+      <details key="start" value="2011"/>
+      <details key="end" value="2022"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateServiceImpl/%.1/%.45/%/entity">
+      <details key="start" value="2011"/>
+      <details key="end" value="2017"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateServiceImpl/%.1/%.46">
+      <details key="start" value="2034"/>
+      <details key="end" value="2043"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateServiceImpl/%.1/%.47">
+      <details key="start" value="2044"/>
+      <details key="end" value="2065"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateServiceImpl/%.1/%.47/%">
+      <details key="start" value="2044"/>
+      <details key="end" value="2055"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateServiceImpl/%.1/%.47/%/entity">
+      <details key="start" value="2044"/>
+      <details key="end" value="2050"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateServiceImpl/%.1/%.48">
+      <details key="start" value="2067"/>
+      <details key="end" value="2091"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateServiceImpl/%.1/%.49">
+      <details key="start" value="2092"/>
+      <details key="end" value="2113"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateServiceImpl/%.1/%.49/%">
+      <details key="start" value="2092"/>
+      <details key="end" value="2103"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateServiceImpl/%.1/%.49/%/entity">
+      <details key="start" value="2092"/>
+      <details key="end" value="2098"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateServiceImpl/%.1/%.50">
+      <details key="start" value="2115"/>
+      <details key="end" value="2155"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateServiceImpl/%.1/%.51">
+      <details key="start" value="2156"/>
+      <details key="end" value="2167"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateServiceImpl/%.1/%.51/entity">
+      <details key="start" value="2156"/>
+      <details key="end" value="2162"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateServiceImpl/%.1/%.52">
+      <details key="start" value="2169"/>
+      <details key="end" value="2170"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateServiceImpl/%.1/%.53">
+      <details key="start" value="2171"/>
+      <details key="end" value="2192"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateServiceImpl/%.1/%.53/%">
+      <details key="start" value="2171"/>
+      <details key="end" value="2182"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateServiceImpl/%.1/%.53/%/entity">
+      <details key="start" value="2171"/>
+      <details key="end" value="2177"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateServiceImpl/%.1/%.54">
+      <details key="start" value="2194"/>
+      <details key="end" value="2306"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateServiceImpl/%.1/%.55">
+      <details key="start" value="2307"/>
+      <details key="end" value="2328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateServiceImpl/%.1/%.55/%">
+      <details key="start" value="2307"/>
+      <details key="end" value="2318"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateServiceImpl/%.1/%.55/%/entity">
+      <details key="start" value="2307"/>
+      <details key="end" value="2313"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateServiceImpl/%.1/%.56">
+      <details key="start" value="2330"/>
+      <details key="end" value="2401"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateServiceImpl/%.1/%.57">
+      <details key="start" value="2402"/>
+      <details key="end" value="2423"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateServiceImpl/%.1/%.57/%">
+      <details key="start" value="2402"/>
+      <details key="end" value="2413"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateServiceImpl/%.1/%.57/%/entity">
+      <details key="start" value="2402"/>
+      <details key="end" value="2408"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateServiceImpl/%.1/%.58">
+      <details key="start" value="2425"/>
+      <details key="end" value="2537"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateServiceImpl/%.1/%.59">
+      <details key="start" value="2538"/>
+      <details key="end" value="2549"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateServiceImpl/%.1/%.59/entity">
+      <details key="start" value="2538"/>
+      <details key="end" value="2544"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateServiceImpl/%.1/%.60">
+      <details key="start" value="2551"/>
+      <details key="end" value="2552"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateServiceImpl/%.1/%.61">
+      <details key="start" value="2553"/>
+      <details key="end" value="2564"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateServiceImpl/%.1/%.61/entity">
+      <details key="start" value="2553"/>
+      <details key="end" value="2559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateServiceImpl/%.1/%.62">
+      <details key="start" value="2566"/>
+      <details key="end" value="2567"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateServiceImpl/%.1/%.63">
+      <details key="start" value="2568"/>
+      <details key="end" value="2589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateServiceImpl/%.1/%.63/%">
+      <details key="start" value="2568"/>
+      <details key="end" value="2579"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateServiceImpl/%.1/%.63/%/entity">
+      <details key="start" value="2568"/>
+      <details key="end" value="2574"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateServiceImpl/%.1/%.64">
+      <details key="start" value="2591"/>
+      <details key="end" value="2643"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateServiceImpl/%.1/%.65">
+      <details key="start" value="2644"/>
+      <details key="end" value="2665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateServiceImpl/%.1/%.65/%">
+      <details key="start" value="2644"/>
+      <details key="end" value="2655"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateServiceImpl/%.1/%.65/%/entity">
+      <details key="start" value="2644"/>
+      <details key="end" value="2650"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateServiceImpl/%.1/%.66">
+      <details key="start" value="2667"/>
+      <details key="end" value="2672"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateServiceImpl/%.1/%.67">
+      <details key="start" value="2673"/>
+      <details key="end" value="2694"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateServiceImpl/%.1/%.67/%">
+      <details key="start" value="2673"/>
+      <details key="end" value="2684"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateServiceImpl/%.1/%.67/%/entity">
+      <details key="start" value="2673"/>
+      <details key="end" value="2679"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generateServiceImpl/%.1/%.68">
+      <details key="start" value="2696"/>
+      <details key="end" value="2719"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generateServiceImpl/%.1/%.69">
+      <details key="start" value="2720"/>
+      <details key="end" value="2741"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generateServiceImpl/%.1/%.69/%">
+      <details key="start" value="2720"/>
+      <details key="end" value="2731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generateServiceImpl/%.1/%.69/%/entity">
+      <details key="start" value="2720"/>
+      <details key="end" value="2726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generateServiceImpl/%.1/%.70">
+      <details key="start" value="2743"/>
+      <details key="end" value="2778"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generateServiceImpl/%.1/%.71">
+      <details key="start" value="2779"/>
+      <details key="end" value="2800"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateServiceImpl/%.1/%.71/%">
+      <details key="start" value="2779"/>
+      <details key="end" value="2790"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateServiceImpl/%.1/%.71/%/entity">
+      <details key="start" value="2779"/>
+      <details key="end" value="2785"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateServiceImpl/%.1/%.72">
+      <details key="start" value="2802"/>
+      <details key="end" value="3347"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateServiceImpl/%.1/%.73">
+      <details key="start" value="3348"/>
+      <details key="end" value="3359"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateServiceImpl/%.1/%.73/entity">
+      <details key="start" value="3348"/>
+      <details key="end" value="3354"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generateServiceImpl/%.1/%.74">
+      <details key="start" value="3361"/>
+      <details key="end" value="3425"/>
+      <details key="line" value="88"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generateServiceImpl/%.1/%.75">
+      <details key="start" value="3426"/>
+      <details key="end" value="3447"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generateServiceImpl/%.1/%.75/%">
+      <details key="start" value="3426"/>
+      <details key="end" value="3437"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generateServiceImpl/%.1/%.75/%/entity">
+      <details key="start" value="3426"/>
+      <details key="end" value="3432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generateServiceImpl/%.1/%.76">
+      <details key="start" value="3449"/>
+      <details key="end" value="3471"/>
+      <details key="line" value="90"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generateServiceImpl/%.1/%.77">
+      <details key="start" value="3472"/>
+      <details key="end" value="3493"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generateServiceImpl/%.1/%.77/%">
+      <details key="start" value="3472"/>
+      <details key="end" value="3483"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generateServiceImpl/%.1/%.77/%/entity">
+      <details key="start" value="3472"/>
+      <details key="end" value="3478"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generateServiceImpl/%.1/%.78">
+      <details key="start" value="3495"/>
+      <details key="end" value="4016"/>
+      <details key="line" value="91"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generateServiceImpl/%.1/%.79">
+      <details key="start" value="155"/>
+      <details key="end" value="214"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generateServiceImpl/%.1/%.79/%">
+      <details key="start" value="155"/>
+      <details key="end" value="167"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generateServiceImpl/%.1/%.79/%.1">
+      <details key="start" value="175"/>
+      <details key="end" value="213"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateServiceImpl/%.1/%.79/%.1/%">
+      <details key="start" value="175"/>
+      <details key="end" value="186"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateServiceImpl/%.1/%.79/%.1/%/entity">
+      <details key="start" value="175"/>
+      <details key="end" value="181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateServiceImpl/%.1/%.79/%.1/%.1">
+      <details key="start" value="194"/>
+      <details key="end" value="212"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateServiceImpl/%.1/%.80">
+      <details key="start" value="223"/>
+      <details key="end" value="230"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateServiceImpl/entity">
+      <details key="start" value="129"/>
+      <details key="end" value="144"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

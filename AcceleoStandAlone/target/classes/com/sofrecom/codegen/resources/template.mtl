@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /] 
+[module template('http://wwww.sofrecom.codegen')/]
+
+[import com::sofrecom::codegen::resources::ControllerTemplate/]
+[import com::sofrecom::codegen::resources::ServiceTemplate/]
+[import com::sofrecom::codegen::resources::ServiceImplTemplate/]
+[import com::sofrecom::codegen::resources::RoutesFragementTemplate/]
+[import com::sofrecom::codegen::resources::ScalaTemplate/]
+[import com::sofrecom::codegen::resources::ScalaEditTemplate/]
+
+
+[template public main( vm : ViewModel)]
+
+	[comment @main /]
+	[for (it : Entity | vm.entities)]
+		[comment  Generate other files /]
+		[ControllerTemplate(it)/]
+		[generateServiceContact(it)/]
+		[generateServiceImpl(it)/]
+		[generateRoutesFragments(it)/]
+		[generateScalaTemplate(it)/]
+		[generateScalaEditTemplate(it)/]
+		[comment  /]
+	
+	[/for]
+
+[/template]
+
+

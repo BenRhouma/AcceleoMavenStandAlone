@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="ServiceTemplate" nsURI="com::sofrecom::codegen::resources::ServiceTemplate" startHeaderPosition="29" endHeaderPosition="269">
+    <input>
+      <takesTypesFrom href="http://wwww.sofrecom.codegen#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateServiceContact" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" package service;&#xA;&#xA;import dto."/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;import play.api.mybatis.guice.paginator.Page;&#xA;import play.libs.F;&#xA;&#xA;public interface "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Service {&#xA;    public Page getPage(int index );&#xA;    public Page getPage(int index , Page from );&#xA;    public void insert"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="(dto."/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;    public  dto."/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" select"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="(Long "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Id);&#xA;    public  F.Tuple&lt;Boolean, String> create"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="FromRequest(dto."/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;    public F.Tuple&lt;Boolean, String> update"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+              <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="s);&#xA;    public F.Tuple&lt;Boolean, String> delete"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+            <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ById(Long id);&#xA;}&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="./service/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="entity" referredVariable="/0/generateServiceContact/entity">
+                <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://wwww.sofrecom.codegen#//Entity/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Service.java">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="entity">
+        <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateServiceContact">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateServiceContact"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="entity">
+          <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Entity_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://wwww.sofrecom.codegen#//Entity"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://wwww.sofrecom.codegen#//Entity"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateServiceContact">
+      <details key="start" value="87"/>
+      <details key="end" value="944"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateServiceContact/%">
+      <details key="start" value="145"/>
+      <details key="end" value="146"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateServiceContact/%.1">
+      <details key="start" value="146"/>
+      <details key="end" value="932"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateServiceContact/%.1/%">
+      <details key="start" value="227"/>
+      <details key="end" value="257"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateServiceContact/%.1/%.1">
+      <details key="start" value="258"/>
+      <details key="end" value="269"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateServiceContact/%.1/%.1/entity">
+      <details key="start" value="258"/>
+      <details key="end" value="264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateServiceContact/%.1/%.2">
+      <details key="start" value="271"/>
+      <details key="end" value="357"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateServiceContact/%.1/%.3">
+      <details key="start" value="358"/>
+      <details key="end" value="369"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateServiceContact/%.1/%.3/entity">
+      <details key="start" value="358"/>
+      <details key="end" value="364"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateServiceContact/%.1/%.4">
+      <details key="start" value="371"/>
+      <details key="end" value="489"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateServiceContact/%.1/%.5">
+      <details key="start" value="490"/>
+      <details key="end" value="501"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateServiceContact/%.1/%.5/entity">
+      <details key="start" value="490"/>
+      <details key="end" value="496"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateServiceContact/%.1/%.6">
+      <details key="start" value="503"/>
+      <details key="end" value="508"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateServiceContact/%.1/%.7">
+      <details key="start" value="509"/>
+      <details key="end" value="520"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateServiceContact/%.1/%.7/entity">
+      <details key="start" value="509"/>
+      <details key="end" value="515"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateServiceContact/%.1/%.8">
+      <details key="start" value="522"/>
+      <details key="end" value="523"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateServiceContact/%.1/%.9">
+      <details key="start" value="524"/>
+      <details key="end" value="545"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateServiceContact/%.1/%.9/%">
+      <details key="start" value="524"/>
+      <details key="end" value="535"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateServiceContact/%.1/%.9/%/entity">
+      <details key="start" value="524"/>
+      <details key="end" value="530"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateServiceContact/%.1/%.10">
+      <details key="start" value="547"/>
+      <details key="end" value="566"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateServiceContact/%.1/%.11">
+      <details key="start" value="567"/>
+      <details key="end" value="578"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateServiceContact/%.1/%.11/entity">
+      <details key="start" value="567"/>
+      <details key="end" value="573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateServiceContact/%.1/%.12">
+      <details key="start" value="580"/>
+      <details key="end" value="587"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateServiceContact/%.1/%.13">
+      <details key="start" value="588"/>
+      <details key="end" value="599"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateServiceContact/%.1/%.13/entity">
+      <details key="start" value="588"/>
+      <details key="end" value="594"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateServiceContact/%.1/%.14">
+      <details key="start" value="601"/>
+      <details key="end" value="607"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateServiceContact/%.1/%.15">
+      <details key="start" value="608"/>
+      <details key="end" value="629"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateServiceContact/%.1/%.15/%">
+      <details key="start" value="608"/>
+      <details key="end" value="619"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateServiceContact/%.1/%.15/%/entity">
+      <details key="start" value="608"/>
+      <details key="end" value="614"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateServiceContact/%.1/%.16">
+      <details key="start" value="631"/>
+      <details key="end" value="679"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateServiceContact/%.1/%.17">
+      <details key="start" value="680"/>
+      <details key="end" value="691"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateServiceContact/%.1/%.17/entity">
+      <details key="start" value="680"/>
+      <details key="end" value="686"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateServiceContact/%.1/%.18">
+      <details key="start" value="693"/>
+      <details key="end" value="709"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateServiceContact/%.1/%.19">
+      <details key="start" value="710"/>
+      <details key="end" value="721"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateServiceContact/%.1/%.19/entity">
+      <details key="start" value="710"/>
+      <details key="end" value="716"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateServiceContact/%.1/%.20">
+      <details key="start" value="723"/>
+      <details key="end" value="724"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateServiceContact/%.1/%.21">
+      <details key="start" value="725"/>
+      <details key="end" value="746"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateServiceContact/%.1/%.21/%">
+      <details key="start" value="725"/>
+      <details key="end" value="736"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateServiceContact/%.1/%.21/%/entity">
+      <details key="start" value="725"/>
+      <details key="end" value="731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateServiceContact/%.1/%.22">
+      <details key="start" value="748"/>
+      <details key="end" value="793"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateServiceContact/%.1/%.23">
+      <details key="start" value="794"/>
+      <details key="end" value="805"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateServiceContact/%.1/%.23/entity">
+      <details key="start" value="794"/>
+      <details key="end" value="800"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateServiceContact/%.1/%.24">
+      <details key="start" value="807"/>
+      <details key="end" value="808"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateServiceContact/%.1/%.25">
+      <details key="start" value="809"/>
+      <details key="end" value="820"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateServiceContact/%.1/%.25/entity">
+      <details key="start" value="809"/>
+      <details key="end" value="815"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateServiceContact/%.1/%.26">
+      <details key="start" value="822"/>
+      <details key="end" value="823"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateServiceContact/%.1/%.27">
+      <details key="start" value="824"/>
+      <details key="end" value="845"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateServiceContact/%.1/%.27/%">
+      <details key="start" value="824"/>
+      <details key="end" value="835"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateServiceContact/%.1/%.27/%/entity">
+      <details key="start" value="824"/>
+      <details key="end" value="830"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateServiceContact/%.1/%.28">
+      <details key="start" value="847"/>
+      <details key="end" value="893"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateServiceContact/%.1/%.29">
+      <details key="start" value="894"/>
+      <details key="end" value="905"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateServiceContact/%.1/%.29/entity">
+      <details key="start" value="894"/>
+      <details key="end" value="900"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateServiceContact/%.1/%.30">
+      <details key="start" value="907"/>
+      <details key="end" value="925"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateServiceContact/%.1/%.31">
+      <details key="start" value="153"/>
+      <details key="end" value="208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateServiceContact/%.1/%.31/%">
+      <details key="start" value="153"/>
+      <details key="end" value="165"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateServiceContact/%.1/%.31/%.1">
+      <details key="start" value="173"/>
+      <details key="end" value="207"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateServiceContact/%.1/%.31/%.1/%">
+      <details key="start" value="173"/>
+      <details key="end" value="184"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateServiceContact/%.1/%.31/%.1/%/entity">
+      <details key="start" value="173"/>
+      <details key="end" value="179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateServiceContact/%.1/%.31/%.1/%.1">
+      <details key="start" value="192"/>
+      <details key="end" value="206"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateServiceContact/%.1/%.32">
+      <details key="start" value="217"/>
+      <details key="end" value="224"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateServiceContact/entity">
+      <details key="start" value="127"/>
+      <details key="end" value="142"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
