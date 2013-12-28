@@ -20,8 +20,8 @@
 		[generateRoutesFragments(it)/]
 		[generateScalaTemplate(it)/]
 		[generateScalaEditTemplate(it)/]
+
 		[comment  /]
-	
 	[/for]
 
 [/template]

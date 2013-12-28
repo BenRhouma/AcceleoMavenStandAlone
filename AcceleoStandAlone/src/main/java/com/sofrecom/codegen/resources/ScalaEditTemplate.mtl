@@ -8,7 +8,6 @@
 @import dto.[entity.name/]
 @import helper._
 
-
  @link(newPage: Int) = @{
         // Generate the link
         controllers.routes.[entity.name/]Controller.list(newPage)
@@ -42,7 +41,7 @@
                 action="@controllers.routes.[entity.name/]Controller.submit()">
 
                 <fieldset>
-                    <legend>Les Informations précèder par <small>(*) sont obligatoires.</small>  </legend>
+                    <legend>Les Informations prï¿½cï¿½der par <small>(*) sont obligatoires.</small>  </legend>
 
                     <input type="hidden" value="@myForm("id").value" name="id" id="id"/>
 

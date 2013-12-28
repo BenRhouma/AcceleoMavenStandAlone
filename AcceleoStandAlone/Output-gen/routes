@@ -1,6 +1,0 @@
-GET         /linkedaccount/list                            controllers.LinkedAccountController.getListpage
-GET         /linkedaccount/list/:pageIndex                 controllers.LinkedAccountController.list(pageIndex :Integer)
-GET         /linkedaccount/edit/:id                        controllers.LinkedAccountController.editPage(id : Long)
-GET         /linkedaccount/add                             controllers.LinkedAccountController.addLinkedAccount
-GET         /linkedaccount/delete/:id                      controllers.LinkedAccountController.deleteLinkedAccount(id :Long)
-POST        /linkedaccount/list                            controllers.LinkedAccountController.submit
