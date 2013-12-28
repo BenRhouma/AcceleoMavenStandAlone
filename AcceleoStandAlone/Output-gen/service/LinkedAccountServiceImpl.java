@@ -3,8 +3,8 @@ package service;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
-import dto.Person;
-import mappers.PersonMapper;
+import dto.LinkedAccount;
+import mappers.LinkedAccountMapper;
 import play.api.mybatis.guice.paginator.Page;
 import org.mybatis.guice.transactional.Transactional;
 import play.Logger;
@@ -14,27 +14,27 @@ import play.libs.F;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 @Singleton
-@AutoBind(service = PersonService.class)
-public class PersonServiceImpl implements PersonService {
+@AutoBind(service = LinkedAccountService.class)
+public class LinkedAccountServiceImpl implements LinkedAccountService {
 
     @Inject
-    private PersonMapper personMapper;
+    private LinkedAccountMapper linkedaccountMapper;
 
 
     @Override
-    public void insertPerson(Person person) {
-        personMapper.insert(person);
+    public void insertLinkedAccount(LinkedAccount linkedaccount) {
+        linkedaccountMapper.insert(linkedaccount);
     }
 
     @Override
-    public Person selectPerson(Long personId) {
-        return personMapper.selectByPrimaryKey(personId);
+    public LinkedAccount selectLinkedAccount(Long linkedaccountId) {
+        return linkedaccountMapper.selectByPrimaryKey(linkedaccountId);
     }
 
 
     @Override
     public Page getPage(int index) {
-        return new Page(PersonMapper.class, index);
+        return new Page(LinkedAccountMapper.class, index);
     }
 
     /**
@@ -42,29 +42,29 @@ public class PersonServiceImpl implements PersonService {
      *
      * @param index : index of the page
      * @param from  : page used as start point of the seek operation
-     * @return : person mybatis result
+     * @return : linkedaccount mybatis result
      */
     @Override
     public Page getPage(int index, Page from) {
         return from.seekPage(index);
     }
     @Override
-    public F.Tuple<Boolean, String> createPersonFromRequest(Person person) {
+    public F.Tuple<Boolean, String> createLinkedAccountFromRequest(LinkedAccount linkedaccount) {
         try {
-            person.setName(person.getFirstName() + " " + person.getLastName());
-            this.insertPerson(person);
+            linkedaccount.setName(linkedaccount.getFirstName() + " " + linkedaccount.getLastName());
+            this.insertLinkedAccount(linkedaccount);
             return F.Tuple(true, "");
         } catch (Exception e) {
-            Logger.error("Error during person insertion", e);
-            return F.Tuple(false, "could not save the person please verify the use informations");
+            Logger.error("Error during linkedaccount insertion", e);
+            return F.Tuple(false, "could not save the linkedaccount please verify the use informations");
         }
     }
 
     @Override
-    public F.Tuple<Boolean, String> updatePerson(Person person) {
+    public F.Tuple<Boolean, String> updateLinkedAccount(LinkedAccount linkedaccount) {
         try {
-            Logger.info("updating person " + person.getId());
-            personMapper.updateByPrimaryKeySelective(person);
+            Logger.info("updating linkedaccount " + linkedaccount.getId());
+            linkedaccountMapper.updateByPrimaryKeySelective(linkedaccount);
             return F.Tuple(true, null);
         } catch (Exception e) {
             Logger.error("Error during person update", e);
@@ -78,10 +78,10 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public F.Tuple<Boolean, String> deletePersonById(Long id) {
+    public F.Tuple<Boolean, String> deleteLinkedAccountById(Long id) {
         try {
-            Logger.info("updating person " + id);
-            personMapper.deleteByPrimaryKey(id);
+            Logger.info("updating linkedaccount " + id);
+            linkedaccountMapper.deleteByPrimaryKey(id);
             return F.Tuple(true, null);
         } catch (Exception e) {
             Logger.error("Error during person update", e);

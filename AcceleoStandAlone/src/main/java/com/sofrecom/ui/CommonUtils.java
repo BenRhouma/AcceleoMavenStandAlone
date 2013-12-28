@@ -5,6 +5,9 @@
  */
 package com.sofrecom.ui;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,6 +32,35 @@ public class CommonUtils {
 
     private static String upperFirstCharacter(String pattern) {
         return pattern.replaceFirst(String.valueOf(pattern.charAt(0)), String.valueOf((char) (((int) pattern.charAt(0)) - 32)));
+    }
+
+    public static List<String> scanClasses(String path, String[] filters) {
+        final List<String> list = new ArrayList<>();
+        String filter = "";
+        for (String str : filters) {
+            filter += str + ".class" + "|";
+        }
+        if (filters.length > 0) {
+            filter = filter.substring(0, filter.length() - 1);
+        }
+
+        final String patternString = String.format("(.*)(%s)$", filter);
+        final Pattern pattern = Pattern.compile(patternString);
+
+        final File file = new File(path);
+        for (final File fl : file.listFiles()) {
+            if (fl.isFile()) {
+                if (fl.getName().endsWith(".class")) {
+                    if (!fl.getName().contains("$")) {
+                        final Matcher matcher = pattern.matcher(fl.getName());
+                        if (!matcher.find()) {
+                            list.add(fl.getName());
+                        }
+                    }
+                }
+            }
+        }
+        return list;
     }
 
 }

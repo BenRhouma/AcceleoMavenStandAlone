@@ -1,11 +1,11 @@
-@(message: String , myForm : Form[dto.Person])
-@import dto.Person
+@(message: String , myForm : Form[dto.LinkedAccount])
+@import dto.LinkedAccount
 @import helper._
 
 
  @link(newPage: Int) = @{
         // Generate the link
-        controllers.routes.PersonController.list(newPage)
+        controllers.routes.LinkedAccountController.list(newPage)
  }
 @template("Projet Commission") {
     <h1> Add Person </h1>
@@ -33,7 +33,7 @@
         <form class="form-horizontal" class="span6 form-horizontal" style="max-width: 600px;"
                 role="form"
                 method="POST"
-                action="@controllers.routes.PersonController.submit()">
+                action="@controllers.routes.LinkedAccountController.submit()">
 
                 <fieldset>
                     <legend>Les Informations pr�c�der par <small>(*) sont obligatoires.</small>  </legend>
@@ -48,27 +48,21 @@
                         </div>
                     </div>
 					<div class="form-group">
-                        <label for="login" class="col-sm-2 control-label">login(*)</label>
+                        <label for="providerKey" class="col-sm-2 control-label">providerKey(*)</label>
                         <div class="col-lg-10">
-                            <input type="input" class="form-control" required value="@myForm("login").value" id="login" name="login" placeholder="Enter login">
+                            <input type="input" class="form-control" required value="@myForm("providerKey").value" id="providerKey" name="providerKey" placeholder="Enter providerkey">
                         </div>
                     </div>
 					<div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">email(*)</label>
+                        <label for="userId" class="col-sm-2 control-label">userId(*)</label>
                         <div class="col-lg-10">
-                            <input type="input" class="form-control" required value="@myForm("email").value" id="email" name="email" placeholder="Enter email">
+                            <input type="input" class="form-control" required value="@myForm("userId").value" id="userId" name="userId" placeholder="Enter userid">
                         </div>
                     </div>
 					<div class="form-group">
-                        <label for="lastName" class="col-sm-2 control-label">lastName(*)</label>
+                        <label for="providerUserId" class="col-sm-2 control-label">providerUserId(*)</label>
                         <div class="col-lg-10">
-                            <input type="input" class="form-control" required value="@myForm("lastName").value" id="lastName" name="lastName" placeholder="Enter lastname">
-                        </div>
-                    </div>
-					<div class="form-group">
-                        <label for="firstName" class="col-sm-2 control-label">firstName(*)</label>
-                        <div class="col-lg-10">
-                            <input type="input" class="form-control" required value="@myForm("firstName").value" id="firstName" name="firstName" placeholder="Enter firstname">
+                            <input type="input" class="form-control" required value="@myForm("providerUserId").value" id="providerUserId" name="providerUserId" placeholder="Enter provideruserid">
                         </div>
                     </div>
 
@@ -77,7 +71,7 @@
                         <label for="controls" class="col-sm-2 control-label"></label>
                         <div class="col-lg-10">
                             <input type="submit" class="btn btn-success" value="Confirm">
-                            <a href="@routes.PersonController.getListpage" class="btn btn-default" >Fermer</a>
+                            <a href="@routes.LinkedAccountController.getListpage" class="btn btn-default" >Fermer</a>
                         </div>
                     </div>
 

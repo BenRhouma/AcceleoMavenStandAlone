@@ -1,41 +1,38 @@
-@(message: String , page : play.api.mybatis.guice.paginator.Page[mappers.PersonMapper]])
-@import dto.Person
+@(message: String , page : play.api.mybatis.guice.paginator.Page[mappers.LinkedAccountMapper]])
+@import dto.LinkedAccount
 @link(newPage: Int) = @{
         // Generate the link
-        controllers.routes.PersonController.list(newPage)
+        controllers.routes.LinkedAccountController.list(newPage)
 }
 @template("Projet Commission") {
     <h1> Liste des Person</h1>
 
-    <a type="button" class="btn btn-default btn-sm pull-right" href="@controllers.routes.PersonController.addPerson">
+    <a type="button" class="btn btn-default btn-sm pull-right" href="@controllers.routes.LinkedAccountController.addLinkedAccount">
         <span class="glyphicon glyphicon-plus"></span> Add
     </a>
     <table class="table table-hover table-bordered table-condensed">
         <tr>
     		<th style = "width: 20% ">id</th>
-    		<th style = "width: 20% ">login</th>
-    		<th style = "width: 20% ">email</th>
-    		<th style = "width: 20% ">lastName</th>
-    		<th style = "width: 20% ">firstName</th>
+    		<th style = "width: 20% ">providerKey</th>
+    		<th style = "width: 20% ">userId</th>
+    		<th style = "width: 20% ">providerUserId</th>
 		<th style = "width: 20% ">Edit</th>
 		</tr>
- @for(personRecord : Person <- page.getList) {
+ @for(linkedaccountRecord : LinkedAccount <- page.getList) {
 
             <tr id="trc-holder-.id">
-    	       <td>@personRecord.id</td>
+    	       <td>@linkedaccountRecord.id</td>
          
-    	       <td>@personRecord.login</td>
+    	       <td>@linkedaccountRecord.providerKey</td>
          
-    	       <td>@personRecord.email</td>
+    	       <td>@linkedaccountRecord.userId</td>
          
-    	       <td>@personRecord.lastName</td>
-         
-    	       <td>@personRecord.firstName</td>
+    	       <td>@linkedaccountRecord.providerUserId</td>
          
 
                 <td style = "width:50px;max-width:50px;" >
-                    <a href="@routes.PersonController.editPage(personRecord.id)" class="glyphicon glyphicon-edit"></a>
-                    <a href="@routes.PersonController.deletePerson(personRecord.id)" class="glyphicon glyphicon-trash"></a>
+                    <a href="@routes.LinkedAccountController.editPage(linkedaccountRecord.id)" class="glyphicon glyphicon-edit"></a>
+                    <a href="@routes.LinkedAccountController.deleteLinkedAccount(linkedaccountRecord.id)" class="glyphicon glyphicon-trash"></a>
                 </td>
             </tr>
         }

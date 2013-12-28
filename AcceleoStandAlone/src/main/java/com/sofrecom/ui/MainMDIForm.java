@@ -45,6 +45,7 @@ public class MainMDIForm extends javax.swing.JFrame {
         openMenuItem = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         dtoParsermenuItem = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         preferencesMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
@@ -85,6 +86,15 @@ public class MainMDIForm extends javax.swing.JFrame {
             }
         });
         fileMenu.add(dtoParsermenuItem);
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
+        jMenuItem3.setText("Generate Playframework Components");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        fileMenu.add(jMenuItem3);
 
         preferencesMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         preferencesMenuItem.setText("Preferences");
@@ -169,7 +179,7 @@ public class MainMDIForm extends javax.swing.JFrame {
     private void dtoParsermenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtoParsermenuItemActionPerformed
         // TODO add your handling code here:
         Dimension desktopSize = desktopPane.getSize();
-        DTOLoader generator = new DTOLoader();
+        ViewModelBuilder generator = new ViewModelBuilder();
         Dimension jInternalFrameSize = generator.getSize();
         if (generator.getSize().width < desktopSize.getSize().width) {
             generator.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
@@ -191,6 +201,18 @@ public class MainMDIForm extends javax.swing.JFrame {
         this.desktopPane.add(preferences);
         preferences.setVisible(true);
     }//GEN-LAST:event_preferencesMenuItemActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+              Dimension desktopSize = desktopPane.getSize();
+        WebCodegen webCodegen = new WebCodegen();
+        Dimension jInternalFrameSize = webCodegen.getSize();
+        if (webCodegen.getSize().width < desktopSize.getSize().width) {
+            webCodegen.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
+        }
+        this.desktopPane.add(webCodegen);
+        webCodegen.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,6 +242,7 @@ public class MainMDIForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem preferencesMenuItem;
