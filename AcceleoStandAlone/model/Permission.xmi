@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:ViewModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://wwww.sofrecom.codegen" xsi:schemaLocation="http://wwww.sofrecom.codegen MetaModel.ecore">
+  <entities name="Permission">
+    <attributes name="id" type="java.lang.Long"/>
+    <attributes name="value" type="java.lang.String"/>
+    <attributes name="idUser" type="java.lang.Long"/>
+  </entities>
+</p:ViewModel>

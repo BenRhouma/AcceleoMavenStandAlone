@@ -1,52 +1,46 @@
-[comment encoding = UTF-8 /]
-[module ScalaTemplate('http://wwww.sofrecom.codegen')]
-
-[template public generateScalaTemplate(it : Entity)]
-
-[file ('./views/'.concat(it.name.toLower()).concat('/').concat(it.name.toLower().concat('_list.scala.html')), false, 'UTF-8')]
-@(message: String , page : play.api.mybatis.guice.paginator.Page['['/]dto.[it.name/][']'/], searched[it.name/] : Form['['/]dto.[it.name/]])
-@import dto.[it.name/]
+@(message: String , page : play.api.mybatis.guice.paginator.Page[dto.Permission], searchedPermission : Form[dto.Permission])
+@import dto.Permission
 @link(newPage: Int) = @{
         // Generate the link
-        controllers.routes.[it.name/]Controller.list(newPage)
+        controllers.routes.PermissionController.list(newPage)
 }
 @template("Projet Commission") {
     <h1> Liste des Person</h1>
 
-    <a type="button" class="btn btn-default btn-sm pull-right" href="@controllers.routes.[it.name/]Controller.add[it.name/]">
+    <a type="button" class="btn btn-default btn-sm pull-right" href="@controllers.routes.PermissionController.addPermission">
         <span class="glyphicon glyphicon-plus"></span> Add
     </a>
-
-	
-	<form action="@controllers.routes.[it.name/]Controller.filter" method="POST">
-
-
     <table class="table table-hover table-bordered table-condensed">
         <tr>
-	[for(att : Attribute | it.attributes)]
-    		<th style = "width: 20% ">[att.name/]</th>
-	[/for]
+    		<th style = "width: 20% ">id</th>
+    		<th style = "width: 20% ">value</th>
+    		<th style = "width: 20% ">idUser</th>
 		<th style = "width: 20% ">Edit</th>
 		</tr>
 
    		<tr>
-	[for(att : Attribute | it.attributes)]
-            <th style = "width: 20% "> <input style="width:100%" type="input" value="@searched[it.name/]("[att.name/]").value" name="@searched[it.name/]("[att.name/]").name" id="@searched[it.name/]("[att.name/]").name"/> </th>
-	[/for]
+            <th style = "width: 20% "> <input style="width:100%" type="input" value="@searchedPermission("id").value" name="@searchedPermission("id").name" id="@searchedPermission("id").name"/> </th>
+            <th style = "width: 20% "> <input style="width:100%" type="input" value="@searchedPermission("value").value" name="@searchedPermission("value").name" id="@searchedPermission("value").name"/> </th>
+            <th style = "width: 20% "> <input style="width:100%" type="input" value="@searchedPermission("idUser").value" name="@searchedPermission("idUser").name" id="@searchedPermission("idUser").name"/> </th>
 		    <th style = "width:50px; max-width:50px;"><input type="submit" value="ok"> </th>
 		</tr>
 
- @for([it.name.toLower().concat('Record')/] : [it.name/] <- page.getList) {
+<form action="@controllers.routes.UsersController.filter" method="POST">
+
+
+ @for(permissionRecord : Permission <- page.getList) {
 
             <tr id="trc-holder-.id">
-	[for(att : Attribute | it.attributes)]
-    	       <td>@[it.name.toLower().concat('Record')/].[att.name/]</td>
+    	       <td>@permissionRecord.id</td>
          
-	[/for]
+    	       <td>@permissionRecord.value</td>
+         
+    	       <td>@permissionRecord.idUser</td>
+         
 
                 <td style = "width:50px;max-width:50px;" >
-                    <a href="@routes.[it.name/]Controller.editPage([it.name.toLower().concat('Record')/].id)" class="glyphicon glyphicon-edit"></a>
-                    <a href="@routes.[it.name/]Controller.delete[it.name/]([it.name.toLower().concat('Record')/].id)" class="glyphicon glyphicon-trash"></a>
+                    <a href="@routes.PermissionController.editPage(permissionRecord.id)" class="glyphicon glyphicon-edit"></a>
+                    <a href="@routes.PermissionController.deletePermission(permissionRecord.id)" class="glyphicon glyphicon-trash"></a>
                 </td>
             </tr>
         }
@@ -88,6 +82,3 @@
         </ul>
  </form>
 }
-		[/file]
-
-[/template]

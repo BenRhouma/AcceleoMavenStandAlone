@@ -1,0 +1,16 @@
+
+GET         /permission/list                            controllers.PermissionController.getListpage
+GET         /permission/list/:pageIndex                 controllers.PermissionController.list(pageIndex :Integer)
+GET         /permission/edit/:id                        controllers.PermissionController.editPage(id : Long)
+GET         /permission/add                             controllers.PermissionController.addPermission
+GET         /permission/delete/:id                      controllers.PermissionController.deletePermission(id :Long)
+POST        /permission/list                            controllers.PermissionController.submit
+POST        /permission/list/filter                     controllers.PermissionController.filter
+
+GET         /permission/list                            controllers.PermissionController.getListpage
+GET         /permission/list/:pageIndex                 controllers.PermissionController.list(pageIndex :Integer)
+GET         /permission/edit/:id                        controllers.PermissionController.editPage(id : Long)
+GET         /permission/add                             controllers.PermissionController.addPermission
+GET         /permission/delete/:id                      controllers.PermissionController.deletePermission(id :Long)
+POST        /permission/list                            controllers.PermissionController.submit
+POST        /permission/list/filter                     controllers.PermissionController.filter

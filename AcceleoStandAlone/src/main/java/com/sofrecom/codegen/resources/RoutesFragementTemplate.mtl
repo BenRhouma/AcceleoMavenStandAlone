@@ -11,5 +11,6 @@ GET         /[entity.name.toLower()/]/edit/:id                        controller
 GET         /[entity.name.toLower()/]/add                             controllers.[entity.name/]Controller.add[entity.name/]
 GET         /[entity.name.toLower()/]/delete/:id                      controllers.[entity.name/]Controller.delete[entity.name/](id :Long)
 POST        /[entity.name.toLower()/]/list                            controllers.[entity.name/]Controller.submit
+POST        /[entity.name.toLower()/]/list/filter                     controllers.[entity.name/]Controller.filter
 [/file]
 [/template]

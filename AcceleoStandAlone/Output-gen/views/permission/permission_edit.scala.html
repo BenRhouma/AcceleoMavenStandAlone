@@ -1,0 +1,75 @@
+@(message: String , myForm : Form[dto.Permission])
+@import dto.Permission
+@import helper._
+
+ @link(newPage: Int) = @{
+        // Generate the link
+        controllers.routes.PermissionController.list(newPage)
+ }
+@template("Projet Commission") {
+    <h1> Add Person </h1>
+    @if(myForm.hasErrors) {
+        <div class="alert alert-error">
+            <strong>Oops</strong> Please fix all errors
+        </div>
+    }
+
+    @if(flash.contains("error")) {
+
+        <div class="bs-callout bs-callout-danger alert alert-danger">
+            <h4>Error during update</h4>
+            <p>@flash.get("error")</p>
+        </div>
+    }
+
+    @if(flash.get("success")) {
+        <div class="alert alert-success">
+        @flash.get("success")
+        </div>
+    }
+
+
+        <form class="form-horizontal" class="span6 form-horizontal" style="max-width: 600px;"
+                role="form"
+                method="POST"
+                action="@controllers.routes.PermissionController.submit()">
+
+                <fieldset>
+                    <legend>Les Informations pr�c�der par <small>(*) sont obligatoires.</small>  </legend>
+
+                    <input type="hidden" value="@myForm("id").value" name="id" id="id"/>
+
+                    
+					<div class="form-group">
+                        <label for="id" class="col-sm-2 control-label">id(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("id").value" id="id" name="id" placeholder="Enter id">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="value" class="col-sm-2 control-label">value(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("value").value" id="value" name="value" placeholder="Enter value">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="idUser" class="col-sm-2 control-label">idUser(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("idUser").value" id="idUser" name="idUser" placeholder="Enter iduser">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="controls" class="col-sm-2 control-label"></label>
+                        <div class="col-lg-10">
+                            <input type="submit" class="btn btn-success" value="Confirm">
+                            <a href="@routes.PermissionController.getListpage" class="btn btn-default" >Fermer</a>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+      </form>
+
+}

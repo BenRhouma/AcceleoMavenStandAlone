@@ -10,13 +10,13 @@ package controllers;
 import com.google.inject.Inject;
 import config.Global;
 import dto.[entity.name/];
-import mappers.[entity.name/]Mapper;
 import play.api.mybatis.guice.paginator.Page;
 import play.data.Form;
 import play.libs.F;
 import play.mvc.Controller;
 import play.mvc.Result;
 import service.[entity.name/]Service;
+import dto.[entity.name/]CriteriaBuilder;
 
 
 /**
@@ -28,6 +28,8 @@ public class [entity.name/]Controller extends Controller {
     static [entity.name/]Service [entity.name.toLower()/]Service = Global.InjectorFactory.getInjector().getInstance([entity.name/]Service.class);
 
     static Form<[entity.name/]> [entity.name.toLower()/]Form = Form.form([entity.name/].class);
+
+	static Form<[entity.name/]> searchForm = Form.form([entity.name/].class);
 
     public static Result submit() {
 
@@ -99,14 +101,25 @@ public class [entity.name/]Controller extends Controller {
 
 
     public static Result getListpage() {
-        Page page = new Page<>([entity.name/].class);
-        return ok(views.html.[entity.name.toLower()/].[entity.name.toLower()/]_list.render("blank page", page));
+		searchForm = Form.form([entity.name/].class).bindFromRequest();
+        final [entity.name/] [entity.name.toLower()/] = searchForm.get();
+        final Page page = new Page<>([entity.name/].class, [entity.name/]CriteriaBuilder.buildCriteria([entity.name.toLower()/]));
+        return ok(views.html.[entity.name.toLower()/].[entity.name.toLower()/]_list.render("blank page", page, searchForm.fill([entity.name.toLower()/])));
+
     }
 
 
     public static Result list(int page) {
         [entity.name.toLower()/]Service = Global.InjectorFactory.getInjector().getInstance([entity.name/]Service.class);
-        return ok(views.html.[entity.name.toLower()/].[entity.name.toLower()/]_list.render("blank page", [entity.name.toLower()/]Service.getPage(page)));
+        return ok(views.html.[entity.name.toLower()/].[entity.name.toLower()/]_list.render("blank page", [entity.name.toLower()/]Service.getPage(page), searchForm.fill(new [entity.name/]())));
+     }
+
+	public static Result filter() {
+
+        searchForm = Form.form([entity.name/].class).bindFromRequest();
+        final [entity.name/] [entity.name.toLower()/] = searchForm.get();
+        final Page page = new Page<>([entity.name/].class, [entity.name/]CriteriaBuilder.buildCriteria([entity.name.toLower()/]));
+        return ok(views.html.[entity.name.toLower()/].[entity.name.toLower()/]_list.render("blank page", page, searchForm.fill([entity.name.toLower()/])));
     }
 
 
