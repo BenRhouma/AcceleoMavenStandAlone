@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:ViewModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://wwww.sofrecom.codegen" xsi:schemaLocation="http://wwww.sofrecom.codegen MetaModel.ecore">
+  <entities name="Person">
+    <attributes name="id" type="java.lang.Long"/>
+    <attributes name="emailValidated" type="java.lang.Boolean"/>
+    <attributes name="lastName" type="java.lang.String"/>
+    <attributes name="lastLogin" type="java.util.Date"/>
+    <attributes name="email" type="java.lang.String"/>
+    <attributes name="name" type="java.lang.String"/>
+    <attributes name="active" type="java.lang.Boolean"/>
+    <attributes name="login" type="java.lang.String"/>
+    <attributes name="firstName" type="java.lang.String"/>
+  </entities>
+</p:ViewModel>

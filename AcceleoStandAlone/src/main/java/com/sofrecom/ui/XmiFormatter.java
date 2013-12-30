@@ -70,7 +70,7 @@ public class XmiFormatter {
             Class<?> cls = cl.loadClass(fullQualifiedClassName);
             Field[] declaredFields = cls.getDeclaredFields();
             for (Field f : declaredFields) {
-                fieldsMap.put(f.getName(), f.getType().toString());
+                fieldsMap.put(f.getName(), f.getType().getName());
             }
             return fieldsMap;
 

@@ -4,7 +4,7 @@
 
 [template public generateRoutesFragments(entity : Entity)]
 
-[file ('routes', false, 'UTF-8')]
+[file ('routes', true, 'UTF-8')]
 GET         /[entity.name.toLower()/]/list                            controllers.[entity.name/]Controller.getListpage
 GET         /[entity.name.toLower()/]/list/:pageIndex                 controllers.[entity.name/]Controller.list(pageIndex :Integer)
 GET         /[entity.name.toLower()/]/edit/:id                        controllers.[entity.name/]Controller.editPage(id : Long)

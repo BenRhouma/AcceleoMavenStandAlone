@@ -13,9 +13,8 @@ import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExceptio
 import dto.[entity.name/];
 import mappers.[entity.name/]Mapper;
 import play.api.mybatis.guice.paginator.Page;
-import org.mybatis.guice.transactional.Transactional;
 import play.Logger;
-import play.api.mybatis.guice.AutoBind;
+import play.api.mybatis.AutoBind;
 import play.libs.F;
 
 import java.sql.SQLIntegrityConstraintViolationException;
@@ -41,7 +40,7 @@ public class [entity.name/]ServiceImpl implements [entity.name/]Service {
 
     @Override
     public Page getPage(int index) {
-        return new Page([entity.name/]Mapper.class, index);
+        return new Page([entity.name/].class, index);
     }
 
     /**
@@ -58,7 +57,6 @@ public class [entity.name/]ServiceImpl implements [entity.name/]Service {
     @Override
     public F.Tuple<Boolean, String> create[entity.name/]FromRequest([entity.name/] [entity.name.toLower()/]) {
         try {
-            [entity.name.toLower()/].setName([entity.name.toLower()/].getFirstName() + " " + [entity.name.toLower()/].getLastName());
             this.insert[entity.name/]([entity.name.toLower()/]);
             return F.Tuple(true, "");
         } catch (Exception e) {

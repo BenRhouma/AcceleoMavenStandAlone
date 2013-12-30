@@ -3,8 +3,8 @@
 
 [template public generateScalaTemplate(it : Entity)]
 
-[file ('./views/'.concat(it.name.toLower()).concat('/').concat(it.name.toLower().concat('.scala.html')), false, 'UTF-8')]
-@(message: String , page : play.api.mybatis.guice.paginator.Page['['/]mappers.[it.name/]Mapper[']'/]])
+[file ('./views/'.concat(it.name.toLower()).concat('/').concat(it.name.toLower().concat('_list.scala.html')), false, 'UTF-8')]
+@(message: String , page : play.api.mybatis.guice.paginator.Page['['/]dto.[it.name/][']'/])
 @import dto.[it.name/]
 @link(newPage: Int) = @{
         // Generate the link

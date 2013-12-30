@@ -7,14 +7,15 @@
 [import com::sofrecom::codegen::resources::RoutesFragementTemplate/]
 [import com::sofrecom::codegen::resources::ScalaTemplate/]
 [import com::sofrecom::codegen::resources::ScalaEditTemplate/]
-
-
+[import com::sofrecom::codegen::resources::DtoCriteriaBuilderTemplate]
+  
 [template public main( vm : ViewModel)]
 
 	[comment @main /]
 	[for (it : Entity | vm.entities)]
 		[comment  Generate other files /]
 		[ControllerTemplate(it)/]
+		[generateDtoCriteriaBuilder(it)/]
 		[generateServiceContact(it)/]
 		[generateServiceImpl(it)/]
 		[generateRoutesFragments(it)/]
