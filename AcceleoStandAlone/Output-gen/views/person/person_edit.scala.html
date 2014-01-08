@@ -1,0 +1,111 @@
+@(message: String , myForm : Form[dto.Person])
+@import dto.Person
+@import helper._
+
+ @link(newPage: Int) = @{
+        // Generate the link
+        controllers.routes.PersonController.list(newPage)
+ }
+@template("Projet Commission") {
+    <h1> Add Person </h1>
+    @if(myForm.hasErrors) {
+        <div class="alert alert-error">
+            <strong>Oops</strong> Please fix all errors
+        </div>
+    }
+
+    @if(flash.contains("error")) {
+
+        <div class="bs-callout bs-callout-danger alert alert-danger">
+            <h4>Error during update</h4>
+            <p>@flash.get("error")</p>
+        </div>
+    }
+
+    @if(flash.get("success")) {
+        <div class="alert alert-success">
+        @flash.get("success")
+        </div>
+    }
+
+
+        <form class="form-horizontal" class="span6 form-horizontal" style="max-width: 600px;"
+                role="form"
+                method="POST"
+                action="@controllers.routes.PersonController.submit()">
+
+                <fieldset>
+                    <legend>Les Informations pr�c�der par <small>(*) sont obligatoires.</small>  </legend>
+
+                    <input type="hidden" value="@myForm("id").value" name="id" id="id"/>
+
+                    
+					<div class="form-group">
+                        <label for="emailValidated" class="col-sm-2 control-label">emailValidated(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("emailValidated").value" id="emailValidated" name="emailValidated" placeholder="Enter emailvalidated">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="lastName" class="col-sm-2 control-label">lastName(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("lastName").value" id="lastName" name="lastName" placeholder="Enter lastname">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="lastLogin" class="col-sm-2 control-label">lastLogin(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("lastLogin").value" id="lastLogin" name="lastLogin" placeholder="Enter lastlogin">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="persId" class="col-sm-2 control-label">persId(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("persId").value" id="persId" name="persId" placeholder="Enter persid">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">email(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("email").value" id="email" name="email" placeholder="Enter email">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">name(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("name").value" id="name" name="name" placeholder="Enter name">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="active" class="col-sm-2 control-label">active(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("active").value" id="active" name="active" placeholder="Enter active">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="login" class="col-sm-2 control-label">login(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("login").value" id="login" name="login" placeholder="Enter login">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="firstName" class="col-sm-2 control-label">firstName(*)</label>
+                        <div class="col-lg-10">
+                            <input type="input" class="form-control" required value="@myForm("firstName").value" id="firstName" name="firstName" placeholder="Enter firstname">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="controls" class="col-sm-2 control-label"></label>
+                        <div class="col-lg-10">
+                            <input type="submit" class="btn btn-success" value="Confirm">
+                            <a href="@routes.PersonController.getListpage" class="btn btn-default" >Fermer</a>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+      </form>
+
+}

@@ -10,6 +10,11 @@
     <a type="button" class="btn btn-default btn-sm pull-right" href="@controllers.routes.PermissionController.addPermission">
         <span class="glyphicon glyphicon-plus"></span> Add
     </a>
+
+	
+	<form action="@controllers.routes.PermissionController.filter" method="POST">
+
+
     <table class="table table-hover table-bordered table-condensed">
         <tr>
     		<th style = "width: 20% ">id</th>
@@ -24,9 +29,6 @@
             <th style = "width: 20% "> <input style="width:100%" type="input" value="@searchedPermission("idUser").value" name="@searchedPermission("idUser").name" id="@searchedPermission("idUser").name"/> </th>
 		    <th style = "width:50px; max-width:50px;"><input type="submit" value="ok"> </th>
 		</tr>
-
-<form action="@controllers.routes.UsersController.filter" method="POST">
-
 
  @for(permissionRecord : Permission <- page.getList) {
 

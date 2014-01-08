@@ -14,13 +14,14 @@ public class [entity.name/]CriteriaBuilder {
     public static [entity.name/]Example buildCriteria([entity.name/] [entity.name.toLower()/]){
      
         final [entity.name/]Example [entity.name.toLowerCase()/]Example = new [entity.name/]Example();
+ 		[entity.name/]Example.Criteria criteria = [entity.name.toLowerCase()/]Example.createCriteria();
 		[for (it : Attribute | entity.attributes)]
 			[if (it.type.equalsIgnoreCase('java.lang.String'))]
 			if([entity.name.toLowerCase()/].[it.name/] != null && ![entity.name.toLowerCase()/].[it.name/].equals(""))
-            	[entity.name.toLowerCase()/]Example.createCriteria().and[it.name.toUpperFirst()/]Like([entity.name.toLowerCase()/].[it.name/]);
+            	criteria.and[it.name.toUpperFirst()/]Like([entity.name.toLowerCase()/].[it.name/]);
 			[else]
 			if([entity.name.toLowerCase()/].[it.name/] != null && ![entity.name.toLowerCase()/].[it.name/].equals(""))
-            	[entity.name.toLowerCase()/]Example.createCriteria().and[it.name.toUpperFirst()/]EqualTo([entity.name.toLowerCase()/].[it.name/]);
+            	criteriaExample.and[it.name.toUpperFirst()/]EqualTo([entity.name.toLowerCase()/].[it.name/]);
 			[/if]
 			
 		[/for]

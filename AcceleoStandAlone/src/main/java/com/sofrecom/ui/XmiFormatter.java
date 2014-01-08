@@ -155,10 +155,8 @@ public class XmiFormatter {
     public void buildAndSaveViewModel() {
         registerXmiFileExtension();
         final File file = createResourceFileIfNotExists();
-        final File eclipseFile = createEclipseResourceFileIfNotExists();
         final ViewModel modelToSave = buildViewModel();
         this.saveModel(modelToSave, file);
-        this.saveModel(modelToSave, eclipseFile);
 
     }
 
@@ -182,17 +180,4 @@ public class XmiFormatter {
 //	public static void main(String... args) {
 //		new XmiFormatter(new String[]{"Person"}, "dto", "E:\\DevSrc\\Remot\\target\\scala-2.10\\classes").buildAndSaveViewModel();;
 //	}
-    private File createEclipseResourceFileIfNotExists() {
-        // create a resource
-        final File file = new File(String.format("%s/%s.xmi",ViewModelBuilder.eclipseModelDirectory, entityNames[0]));
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-        }
-
-        return file;
-    }
 }

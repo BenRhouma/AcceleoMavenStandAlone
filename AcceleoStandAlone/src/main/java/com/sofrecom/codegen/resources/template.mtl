@@ -7,7 +7,8 @@
 [import com::sofrecom::codegen::resources::RoutesFragementTemplate/]
 [import com::sofrecom::codegen::resources::ScalaTemplate/]
 [import com::sofrecom::codegen::resources::ScalaEditTemplate/]
-[import com::sofrecom::codegen::resources::DtoCriteriaBuilderTemplate]
+[import com::sofrecom::codegen::resources::DtoCriteriaBuilderTemplate/]
+[import com::sofrecom::codegen::resources::JavaScriptModuleTemplate/]
   
 [template public main( vm : ViewModel)]
 
@@ -21,6 +22,7 @@
 		[generateRoutesFragments(it)/]
 		[generateScalaTemplate(it)/]
 		[generateScalaEditTemplate(it)/]
+		[generateJavaScriptModule(it)/]
 
 		[comment  /]
 	[/for]

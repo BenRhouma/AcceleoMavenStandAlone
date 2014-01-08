@@ -14,8 +14,6 @@ import java.util.regex.Pattern;
 import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -25,7 +23,8 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
 
     final DefaultListModel selectionListModel = new DefaultListModel();
     final DefaultListModel scanListModel = new DefaultListModel();
-    public static String eclipseModelDirectory ="E:\\DevSrc\\AcceleoEclipseSteamProject\\model\\";
+//    public static String eclipseModelDirectory ="E:\\DevSrc\\AcceleoEclipseSteamProject\\model\\";
+    private String[] filers = new String[]{"Example" ,"CriteriaBuilder"};
 
     /**
      * Creates new form DTOLoader
@@ -351,7 +350,7 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
                 this.generateViewModelBtn.setEnabled(false);
             }
         } else {
-            if (!verifyClassesDireectory()) {
+            if (!verifyClassesDirectory()) {
                 this.generateViewModelBtn.setEnabled(false);
             } else {
                 if (!selectionListModel.isEmpty()) {
@@ -397,7 +396,7 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-        if (verifyClassesDireectory()) {
+        if (verifyClassesDirectory()) {
             initListBoxs();
         }
         this.showMutilpleDtoConfiguration();
@@ -439,6 +438,8 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
         this.dtoValueLabel.setVisible(false);
         this.multipleDtoConfigurationPanel.setVisible(true);
     }
+    
+    
     public File getDirectoryChoice(Component owner, String defaultDirectory, String title) {
         final SecurityManager sm = System.getSecurityManager();
         final JFileChooser chooser = new JFileChooser();
@@ -453,9 +454,9 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
         }
         chooser.setDialogTitle(title);
         chooser.setApproveButtonText("OK");
-        final int choice = chooser.showOpenDialog(owner);
+        
         owner.requestFocus();
-        switch (choice) {
+        switch ( chooser.showOpenDialog(owner)) {
             case JFileChooser.APPROVE_OPTION:
                 if (chooser.getSelectedFile() != null) {
                     if (chooser.getSelectedFile().exists()) {
@@ -475,7 +476,9 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
 
         return choiceFile;
     }
-
+    /**
+     * fill the form with preregistred values
+     */
     private void loadUIConfiguration() {
         Configuration.loadConfiguration();
         this.outpathTextField.setText(Configuration.getProperty(Configuration.LastUsedClassPath));
@@ -483,7 +486,7 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
         this.multipleDtoConfigurationPanel.setVisible(false);
 
     }
-
+    
     void loadDtoConfiguration() {
         String lastUsedTablename = Configuration.getProperty(Configuration.LastUsedTableName);
         // if the first character is a lower case 
@@ -521,7 +524,7 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
     /**
      * detect if the given directory in the output path is a classes directory
      */
-    private boolean verifyClassesDireectory() {
+    private boolean verifyClassesDirectory() {
 
         this.outpathTextField.setBackground(new Color(255, 204, 204));
         final File classDirectory = new File(this.outpathTextField.getText());
@@ -543,7 +546,7 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
 
     private boolean verifyDtoExistance() {
         this.defaultDtoInputtext.setBackground(new Color(255, 204, 204));
-        if (!verifyClassesDireectory()) {
+        if (!verifyClassesDirectory()) {
             return false;
         }
         final String filename = String.format("%s/%s.class", this.outpathTextField.getText(), this.defaultDtoInputtext.getText().replaceAll("\\.", "/"));
@@ -562,7 +565,7 @@ public class ViewModelBuilder extends javax.swing.JInternalFrame {
 
     private void initListBoxs() {
         String path = String.format("%s/dto/", this.outpathTextField.getText());
-        List<String> scanClasses = CommonUtils.scanClasses(path, new String[]{"Example"});
+        List<String> scanClasses = CommonUtils.scanClasses(path, filers);
         scanListModel.clear();
         selectionListModel.clear();
         for (String str : scanClasses) {
