@@ -9,14 +9,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refEntity" upperBound="-1"
-        eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
         eType="#//Context" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refEntity" upperBound="-1"
+        eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceColumn" eType="#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//Attribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPrimaryKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
         eType="#//Context" containment="true"/>
   </eClassifiers>
@@ -32,5 +35,6 @@
         eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
         eType="#//MapEnrty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="master" eType="#//Entity"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -13,19 +13,26 @@
 [template public main( vm : ViewModel)]
 
 	[comment @main /]
-	[for (it : Entity | vm.entities)]
-		[comment  Generate other files /]
-		[ControllerTemplate(it)/]
-		[generateDtoCriteriaBuilder(it)/]
-		[generateServiceContact(it)/]
-		[generateServiceImpl(it)/]
-		[generateRoutesFragments(it)/]
-		[generateScalaTemplate(it)/]
-		[generateScalaEditTemplate(it)/]
-		[generateJavaScriptModule(it)/]
-
-		[comment  /]
-	[/for]
+	
+	[comment  Generate other files /]
+	[if (vm.master <> null)]
+		[file ('./est/ss.txt', false, 'UTF-8')]
+				test
+		[/file]
+	[else]
+		[for (it : Entity | vm.entities)]
+			[generateControllerTemplate(it)/]
+			[generateDtoCriteriaBuilder(it)/]
+			[generateServiceContact(it)/]
+			[generateServiceImpl(it)/]
+			[generateRoutesFragments(it)/]
+			[generateScalaTemplate(it)/]
+			[generateScalaEditTemplate(it)/]
+			[generateJavaScriptModule(it)/] 	
+		[/for]
+	[/if]
+	[comment  /]
+	
 
 [/template]
 

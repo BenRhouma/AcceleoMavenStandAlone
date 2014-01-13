@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link codegen.impl.ViewModelImpl#getID <em>ID</em>}</li>
  *   <li>{@link codegen.impl.ViewModelImpl#getEntities <em>Entities</em>}</li>
  *   <li>{@link codegen.impl.ViewModelImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link codegen.impl.ViewModelImpl#getMaster <em>Master</em>}</li>
  * </ul>
  * </p>
  *
@@ -92,6 +93,16 @@ public class ViewModelImpl extends MinimalEObjectImpl.Container implements ViewM
 	 * @ordered
 	 */
 	protected EMap<String, String> values;
+
+	/**
+	 * The cached value of the '{@link #getMaster() <em>Master</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaster()
+	 * @generated
+	 * @ordered
+	 */
+	protected Entity master;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,6 +185,44 @@ public class ViewModelImpl extends MinimalEObjectImpl.Container implements ViewM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Entity getMaster() {
+		if (master != null && master.eIsProxy()) {
+			InternalEObject oldMaster = (InternalEObject)master;
+			master = (Entity)eResolveProxy(oldMaster);
+			if (master != oldMaster) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodegenPackage.VIEW_MODEL__MASTER, oldMaster, master));
+			}
+		}
+		return master;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetMaster() {
+		return master;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaster(Entity newMaster) {
+		Entity oldMaster = master;
+		master = newMaster;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CodegenPackage.VIEW_MODEL__MASTER, oldMaster, master));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -204,6 +253,9 @@ public class ViewModelImpl extends MinimalEObjectImpl.Container implements ViewM
 			case CodegenPackage.VIEW_MODEL__VALUES:
 				if (coreType) return getValues();
 				else return getValues().map();
+			case CodegenPackage.VIEW_MODEL__MASTER:
+				if (resolve) return getMaster();
+				return basicGetMaster();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -231,6 +283,9 @@ public class ViewModelImpl extends MinimalEObjectImpl.Container implements ViewM
 			case CodegenPackage.VIEW_MODEL__VALUES:
 				((EStructuralFeature.Setting)getValues()).set(newValue);
 				return;
+			case CodegenPackage.VIEW_MODEL__MASTER:
+				setMaster((Entity)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -255,6 +310,9 @@ public class ViewModelImpl extends MinimalEObjectImpl.Container implements ViewM
 			case CodegenPackage.VIEW_MODEL__VALUES:
 				getValues().clear();
 				return;
+			case CodegenPackage.VIEW_MODEL__MASTER:
+				setMaster((Entity)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -275,6 +333,8 @@ public class ViewModelImpl extends MinimalEObjectImpl.Container implements ViewM
 				return entities != null && !entities.isEmpty();
 			case CodegenPackage.VIEW_MODEL__VALUES:
 				return values != null && !values.isEmpty();
+			case CodegenPackage.VIEW_MODEL__MASTER:
+				return master != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -33,8 +33,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link codegen.impl.EntityImpl#getName <em>Name</em>}</li>
  *   <li>{@link codegen.impl.EntityImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link codegen.impl.EntityImpl#getRefEntity <em>Ref Entity</em>}</li>
  *   <li>{@link codegen.impl.EntityImpl#getContext <em>Context</em>}</li>
+ *   <li>{@link codegen.impl.EntityImpl#getRefEntity <em>Ref Entity</em>}</li>
+ *   <li>{@link codegen.impl.EntityImpl#getSourceColumn <em>Source Column</em>}</li>
+ *   <li>{@link codegen.impl.EntityImpl#getDestination <em>Destination</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,6 +74,16 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	protected EList<Attribute> attributes;
 
 	/**
+	 * The cached value of the '{@link #getContext() <em>Context</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Context> context;
+
+	/**
 	 * The cached value of the '{@link #getRefEntity() <em>Ref Entity</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,14 +94,24 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	protected EList<Entity> refEntity;
 
 	/**
-	 * The cached value of the '{@link #getContext() <em>Context</em>}' containment reference list.
+	 * The cached value of the '{@link #getSourceColumn() <em>Source Column</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContext()
+	 * @see #getSourceColumn()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Context> context;
+	protected Attribute sourceColumn;
+
+	/**
+	 * The cached value of the '{@link #getDestination() <em>Destination</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDestination()
+	 * @generated
+	 * @ordered
+	 */
+	protected Attribute destination;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +170,18 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Context> getContext() {
+		if (context == null) {
+			context = new EObjectContainmentEList<Context>(Context.class, this, CodegenPackage.ENTITY__CONTEXT);
+		}
+		return context;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Entity> getRefEntity() {
 		if (refEntity == null) {
 			refEntity = new EObjectResolvingEList<Entity>(Entity.class, this, CodegenPackage.ENTITY__REF_ENTITY);
@@ -160,11 +194,75 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Context> getContext() {
-		if (context == null) {
-			context = new EObjectContainmentEList<Context>(Context.class, this, CodegenPackage.ENTITY__CONTEXT);
+	public Attribute getSourceColumn() {
+		if (sourceColumn != null && sourceColumn.eIsProxy()) {
+			InternalEObject oldSourceColumn = (InternalEObject)sourceColumn;
+			sourceColumn = (Attribute)eResolveProxy(oldSourceColumn);
+			if (sourceColumn != oldSourceColumn) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodegenPackage.ENTITY__SOURCE_COLUMN, oldSourceColumn, sourceColumn));
+			}
 		}
-		return context;
+		return sourceColumn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribute basicGetSourceColumn() {
+		return sourceColumn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSourceColumn(Attribute newSourceColumn) {
+		Attribute oldSourceColumn = sourceColumn;
+		sourceColumn = newSourceColumn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CodegenPackage.ENTITY__SOURCE_COLUMN, oldSourceColumn, sourceColumn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribute getDestination() {
+		if (destination != null && destination.eIsProxy()) {
+			InternalEObject oldDestination = (InternalEObject)destination;
+			destination = (Attribute)eResolveProxy(oldDestination);
+			if (destination != oldDestination) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodegenPackage.ENTITY__DESTINATION, oldDestination, destination));
+			}
+		}
+		return destination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribute basicGetDestination() {
+		return destination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDestination(Attribute newDestination) {
+		Attribute oldDestination = destination;
+		destination = newDestination;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CodegenPackage.ENTITY__DESTINATION, oldDestination, destination));
 	}
 
 	/**
@@ -195,10 +293,16 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 				return getName();
 			case CodegenPackage.ENTITY__ATTRIBUTES:
 				return getAttributes();
-			case CodegenPackage.ENTITY__REF_ENTITY:
-				return getRefEntity();
 			case CodegenPackage.ENTITY__CONTEXT:
 				return getContext();
+			case CodegenPackage.ENTITY__REF_ENTITY:
+				return getRefEntity();
+			case CodegenPackage.ENTITY__SOURCE_COLUMN:
+				if (resolve) return getSourceColumn();
+				return basicGetSourceColumn();
+			case CodegenPackage.ENTITY__DESTINATION:
+				if (resolve) return getDestination();
+				return basicGetDestination();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,13 +323,19 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
+			case CodegenPackage.ENTITY__CONTEXT:
+				getContext().clear();
+				getContext().addAll((Collection<? extends Context>)newValue);
+				return;
 			case CodegenPackage.ENTITY__REF_ENTITY:
 				getRefEntity().clear();
 				getRefEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
-			case CodegenPackage.ENTITY__CONTEXT:
-				getContext().clear();
-				getContext().addAll((Collection<? extends Context>)newValue);
+			case CodegenPackage.ENTITY__SOURCE_COLUMN:
+				setSourceColumn((Attribute)newValue);
+				return;
+			case CodegenPackage.ENTITY__DESTINATION:
+				setDestination((Attribute)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,11 +355,17 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 			case CodegenPackage.ENTITY__ATTRIBUTES:
 				getAttributes().clear();
 				return;
+			case CodegenPackage.ENTITY__CONTEXT:
+				getContext().clear();
+				return;
 			case CodegenPackage.ENTITY__REF_ENTITY:
 				getRefEntity().clear();
 				return;
-			case CodegenPackage.ENTITY__CONTEXT:
-				getContext().clear();
+			case CodegenPackage.ENTITY__SOURCE_COLUMN:
+				setSourceColumn((Attribute)null);
+				return;
+			case CodegenPackage.ENTITY__DESTINATION:
+				setDestination((Attribute)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -267,10 +383,14 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CodegenPackage.ENTITY__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
-			case CodegenPackage.ENTITY__REF_ENTITY:
-				return refEntity != null && !refEntity.isEmpty();
 			case CodegenPackage.ENTITY__CONTEXT:
 				return context != null && !context.isEmpty();
+			case CodegenPackage.ENTITY__REF_ENTITY:
+				return refEntity != null && !refEntity.isEmpty();
+			case CodegenPackage.ENTITY__SOURCE_COLUMN:
+				return sourceColumn != null;
+			case CodegenPackage.ENTITY__DESTINATION:
+				return destination != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -14,3 +14,4 @@ POST        /[entity.name.toLower()/]/list                            controller
 POST        /[entity.name.toLower()/]/list/filter                     controllers.[entity.name/]Controller.filter
 [/file]
 [/template]
+ 

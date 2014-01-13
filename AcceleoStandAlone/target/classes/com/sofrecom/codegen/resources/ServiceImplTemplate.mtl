@@ -18,7 +18,7 @@ import play.api.mybatis.AutoBind;
 import play.libs.F;
 
 import java.sql.SQLIntegrityConstraintViolationException;
-
+ 
 @Singleton
 @AutoBind(service = [entity.name/]Service.class)
 public class [entity.name/]ServiceImpl implements [entity.name/]Service {

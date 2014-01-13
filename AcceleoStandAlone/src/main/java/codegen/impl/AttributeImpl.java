@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link codegen.impl.AttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link codegen.impl.AttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link codegen.impl.AttributeImpl#getIsPrimaryKey <em>Is Primary Key</em>}</li>
  *   <li>{@link codegen.impl.AttributeImpl#getContext <em>Context</em>}</li>
  * </ul>
  * </p>
@@ -77,6 +78,26 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsPrimaryKey() <em>Is Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsPrimaryKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_PRIMARY_KEY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIsPrimaryKey() <em>Is Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsPrimaryKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isPrimaryKey = IS_PRIMARY_KEY_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getContext() <em>Context</em>}' containment reference list.
@@ -154,6 +175,27 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Boolean getIsPrimaryKey() {
+		return isPrimaryKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPrimaryKey(Boolean newIsPrimaryKey) {
+		Boolean oldIsPrimaryKey = isPrimaryKey;
+		isPrimaryKey = newIsPrimaryKey;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CodegenPackage.ATTRIBUTE__IS_PRIMARY_KEY, oldIsPrimaryKey, isPrimaryKey));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Context> getContext() {
 		if (context == null) {
 			context = new EObjectContainmentEList<Context>(Context.class, this, CodegenPackage.ATTRIBUTE__CONTEXT);
@@ -187,6 +229,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return getName();
 			case CodegenPackage.ATTRIBUTE__TYPE:
 				return getType();
+			case CodegenPackage.ATTRIBUTE__IS_PRIMARY_KEY:
+				return getIsPrimaryKey();
 			case CodegenPackage.ATTRIBUTE__CONTEXT:
 				return getContext();
 		}
@@ -207,6 +251,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return;
 			case CodegenPackage.ATTRIBUTE__TYPE:
 				setType((String)newValue);
+				return;
+			case CodegenPackage.ATTRIBUTE__IS_PRIMARY_KEY:
+				setIsPrimaryKey((Boolean)newValue);
 				return;
 			case CodegenPackage.ATTRIBUTE__CONTEXT:
 				getContext().clear();
@@ -230,6 +277,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case CodegenPackage.ATTRIBUTE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
+			case CodegenPackage.ATTRIBUTE__IS_PRIMARY_KEY:
+				setIsPrimaryKey(IS_PRIMARY_KEY_EDEFAULT);
+				return;
 			case CodegenPackage.ATTRIBUTE__CONTEXT:
 				getContext().clear();
 				return;
@@ -249,6 +299,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CodegenPackage.ATTRIBUTE__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case CodegenPackage.ATTRIBUTE__IS_PRIMARY_KEY:
+				return IS_PRIMARY_KEY_EDEFAULT == null ? isPrimaryKey != null : !IS_PRIMARY_KEY_EDEFAULT.equals(isPrimaryKey);
 			case CodegenPackage.ATTRIBUTE__CONTEXT:
 				return context != null && !context.isEmpty();
 		}
@@ -269,6 +321,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		result.append(name);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", isPrimaryKey: ");
+		result.append(isPrimaryKey);
 		result.append(')');
 		return result.toString();
 	}

@@ -19,7 +19,7 @@
             <strong>Oops</strong> Please fix all errors
         </div>
     }
-
+ 
     @if(flash.contains("error")) {
 
         <div class="bs-callout bs-callout-danger alert alert-danger">

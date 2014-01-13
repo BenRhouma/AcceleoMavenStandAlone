@@ -19,6 +19,6 @@ public interface [entity.name/]Service {
     public F.Tuple<Boolean, String> update[entity.name/]([entity.name/] [entity.name.toLower()/]s);
     public F.Tuple<Boolean, String> delete[entity.name/]ById(Long id);
 }
-
+ 
 [/file]
 [/template]

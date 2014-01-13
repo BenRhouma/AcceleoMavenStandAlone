@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link codegen.ViewModel#getID <em>ID</em>}</li>
  *   <li>{@link codegen.ViewModel#getEntities <em>Entities</em>}</li>
  *   <li>{@link codegen.ViewModel#getValues <em>Values</em>}</li>
+ *   <li>{@link codegen.ViewModel#getMaster <em>Master</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,5 +102,31 @@ public interface ViewModel extends EObject {
 	 * @generated
 	 */
 	EMap<String, String> getValues();
+
+	/**
+	 * Returns the value of the '<em><b>Master</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Master</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Master</em>' reference.
+	 * @see #setMaster(Entity)
+	 * @see codegen.CodegenPackage#getViewModel_Master()
+	 * @model
+	 * @generated
+	 */
+	Entity getMaster();
+
+	/**
+	 * Sets the value of the '{@link codegen.ViewModel#getMaster <em>Master</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Master</em>' reference.
+	 * @see #getMaster()
+	 * @generated
+	 */
+	void setMaster(Entity value);
 
 } // ViewModel

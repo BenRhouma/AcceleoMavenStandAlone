@@ -6,10 +6,9 @@
 
 [file ('./dto/'.concat(entity.name.concat('CriteriaBuilder.java')), false, 'UTF-8')]
 package dto;
-
+ 
 public class [entity.name/]CriteriaBuilder {
 
- 
 
     public static [entity.name/]Example buildCriteria([entity.name/] [entity.name.toLower()/]){
      

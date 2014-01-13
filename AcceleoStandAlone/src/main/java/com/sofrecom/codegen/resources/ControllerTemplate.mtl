@@ -1,7 +1,7 @@
 [comment encoding = UTF-8 /]
 [module ControllerTemplate('http://wwww.sofrecom.codegen')]
 
-[template public ControllerTemplate(entity : Entity)]
+[template public generateControllerTemplate(entity : Entity)]
 
 [file ('./controllers/'.concat(entity.name.concat('Controller.java')), false, 'UTF-8')]
 package controllers;

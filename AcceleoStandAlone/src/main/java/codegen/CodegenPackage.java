@@ -131,22 +131,40 @@ public interface CodegenPackage extends EPackage {
 	int ENTITY__ATTRIBUTES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Ref Entity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__REF_ENTITY = 2;
-
-	/**
 	 * The feature id for the '<em><b>Context</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__CONTEXT = 3;
+	int ENTITY__CONTEXT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Ref Entity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__REF_ENTITY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Source Column</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__SOURCE_COLUMN = 4;
+
+	/**
+	 * The feature id for the '<em><b>Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__DESTINATION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -155,7 +173,7 @@ public interface CodegenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = 4;
+	int ENTITY_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -195,13 +213,22 @@ public interface CodegenPackage extends EPackage {
 	int ATTRIBUTE__TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Is Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__IS_PRIMARY_KEY = 2;
+
+	/**
 	 * The feature id for the '<em><b>Context</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__CONTEXT = 2;
+	int ATTRIBUTE__CONTEXT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -210,7 +237,7 @@ public interface CodegenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = 3;
+	int ATTRIBUTE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -314,13 +341,22 @@ public interface CodegenPackage extends EPackage {
 	int VIEW_MODEL__VALUES = 3;
 
 	/**
+	 * The feature id for the '<em><b>Master</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_MODEL__MASTER = 4;
+
+	/**
 	 * The number of structural features of the '<em>View Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_MODEL_FEATURE_COUNT = 4;
+	int VIEW_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>View Model</em>' class.
@@ -399,6 +435,17 @@ public interface CodegenPackage extends EPackage {
 	EReference getEntity_Attributes();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link codegen.Entity#getContext <em>Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Context</em>'.
+	 * @see codegen.Entity#getContext()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Context();
+
+	/**
 	 * Returns the meta object for the reference list '{@link codegen.Entity#getRefEntity <em>Ref Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,15 +457,26 @@ public interface CodegenPackage extends EPackage {
 	EReference getEntity_RefEntity();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link codegen.Entity#getContext <em>Context</em>}'.
+	 * Returns the meta object for the reference '{@link codegen.Entity#getSourceColumn <em>Source Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Context</em>'.
-	 * @see codegen.Entity#getContext()
+	 * @return the meta object for the reference '<em>Source Column</em>'.
+	 * @see codegen.Entity#getSourceColumn()
 	 * @see #getEntity()
 	 * @generated
 	 */
-	EReference getEntity_Context();
+	EReference getEntity_SourceColumn();
+
+	/**
+	 * Returns the meta object for the reference '{@link codegen.Entity#getDestination <em>Destination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Destination</em>'.
+	 * @see codegen.Entity#getDestination()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Destination();
 
 	/**
 	 * Returns the meta object for class '{@link codegen.Attribute <em>Attribute</em>}'.
@@ -451,6 +509,17 @@ public interface CodegenPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAttribute_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link codegen.Attribute#getIsPrimaryKey <em>Is Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Primary Key</em>'.
+	 * @see codegen.Attribute#getIsPrimaryKey()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_IsPrimaryKey();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link codegen.Attribute#getContext <em>Context</em>}'.
@@ -550,6 +619,17 @@ public interface CodegenPackage extends EPackage {
 	EReference getViewModel_Values();
 
 	/**
+	 * Returns the meta object for the reference '{@link codegen.ViewModel#getMaster <em>Master</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Master</em>'.
+	 * @see codegen.ViewModel#getMaster()
+	 * @see #getViewModel()
+	 * @generated
+	 */
+	EReference getViewModel_Master();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -625,6 +705,14 @@ public interface CodegenPackage extends EPackage {
 		EReference ENTITY__ATTRIBUTES = eINSTANCE.getEntity_Attributes();
 
 		/**
+		 * The meta object literal for the '<em><b>Context</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__CONTEXT = eINSTANCE.getEntity_Context();
+
+		/**
 		 * The meta object literal for the '<em><b>Ref Entity</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -633,12 +721,20 @@ public interface CodegenPackage extends EPackage {
 		EReference ENTITY__REF_ENTITY = eINSTANCE.getEntity_RefEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Context</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Source Column</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY__CONTEXT = eINSTANCE.getEntity_Context();
+		EReference ENTITY__SOURCE_COLUMN = eINSTANCE.getEntity_SourceColumn();
+
+		/**
+		 * The meta object literal for the '<em><b>Destination</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__DESTINATION = eINSTANCE.getEntity_Destination();
 
 		/**
 		 * The meta object literal for the '{@link codegen.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -665,6 +761,14 @@ public interface CodegenPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Primary Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__IS_PRIMARY_KEY = eINSTANCE.getAttribute_IsPrimaryKey();
 
 		/**
 		 * The meta object literal for the '<em><b>Context</b></em>' containment reference list feature.
@@ -741,6 +845,14 @@ public interface CodegenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VIEW_MODEL__VALUES = eINSTANCE.getViewModel_Values();
+
+		/**
+		 * The meta object literal for the '<em><b>Master</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEW_MODEL__MASTER = eINSTANCE.getViewModel_Master();
 
 	}
 

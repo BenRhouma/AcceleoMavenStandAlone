@@ -17,7 +17,7 @@
         <span class="glyphicon glyphicon-plus"></span> Add
     </a>
 
-	
+	 
 	<form action="@controllers.routes.[it.name/]Controller.filter" method="POST">
 
 

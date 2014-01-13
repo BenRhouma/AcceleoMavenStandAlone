@@ -12,13 +12,16 @@ class MapEnrty : java.util.Map$Entry{
 class Entity {
   attr String name;
   val Attribute[*] attributes;
-  ref Entity[*] refEntity;
   val Context[*] context;
+  ref Entity[*] refEntity;
+  ref Attribute sourceColumn;
+  ref Attribute destination;
 }
 
 class Attribute {
   attr String name;
   attr String type;
+  attr Boolean isPrimaryKey;
   val Context[*] context;
 }
 
@@ -32,6 +35,7 @@ class ViewModel {
   attr String ID;
   val Entity[*] entities;
   val MapEnrty[*] values;
+  ref Entity master;
 }
 
 
